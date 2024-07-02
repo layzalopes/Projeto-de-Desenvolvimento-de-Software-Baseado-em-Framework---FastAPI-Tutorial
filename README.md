@@ -33,9 +33,27 @@ pip install fastapi uvicorn
    - Certifique-se de que a opção "HTTPS" está selecionada.
    - Clique no ícone de cópia (um pequeno botão com um ícone de prancheta) ao lado da URL para copiar o endereço do repositório.
    - Abra o terminal ou prompt de comando clicando com o botão direito do mouse na área de trabalho e selecionando a opção "Abrir no Terminal"
-   - Executar o seguinte comando + o endereço https que foi copiado anteriormente
+   - Executar o seguinte comando:
 ```bash
 git clone https://github.com/layzalopes/Projeto-de-Desenvolvimento-de-Software-Baseado-em-Framework---FastAPI-Tutorial.git
 ```
-
-
+Estrutura:
+```bash
+pacoca_api/
+├── app/
+│   ├── main.py
+│   ├── models.py
+│   ├── schemas.py
+│   └── crud.py
+├── Dockerfile
+└── requirements.txt
+```
+3. Construindo e Executando com Docker
+   - Dentro do VisualStudio clicar em "View" localizado na parte superior.
+   - Selecionar a opção "Terminal" para abrir o terminal já dentro do diretório.
+   - Executar o seguinte comando:
+```bash
+docker build -t pacoca_api .
+```
+Ele irá contruir a Imagem do Docker.
+   
