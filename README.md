@@ -15,3 +15,13 @@ Docker é uma plataforma que permite aos desenvolvedores automatizar a implanta�
 - Ensinar como criar endpoints para diferentes operações HTTP (GET, POST, PUT, DELETE).
 - Integrar o projeto FastAPI com Docker para facilitar o desenvolvimento e a implantação.
 - Fornecer exemplos práticos e tutoriais passo a passo para ajudar os desenvolvedores a entender e implementar suas próprias APIs.
+
+# Passo a Passo
+1. Configurando o Ambiente
+   Passo 1: Instalar Dependências
+   - Certifique-se de ter o Python 3.7+ e o Docker instalados na sua máquina.
+   - Instale o FastAPI e o Uvicorn:
+    ```pip install fastapi uvicorn```
+
+
+
