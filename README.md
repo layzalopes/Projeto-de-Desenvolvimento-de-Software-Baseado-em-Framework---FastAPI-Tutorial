@@ -21,7 +21,6 @@ Docker é uma plataforma que permite aos desenvolvedores automatizar a implanta�
    Passo 1: Instalar Dependências
    - Certifique-se de ter o Python 3.7+ e o Docker instalados na sua máquina.
    - Instale o FastAPI e o Uvicorn:
-     ~~~ pip install fastapi uvicorn ~~~
-
+     ```bash pip install fastapi uvicorn
 
 
