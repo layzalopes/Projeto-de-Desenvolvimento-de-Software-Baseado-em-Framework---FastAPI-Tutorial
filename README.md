@@ -51,9 +51,12 @@ pacoca_api/
 3. Construindo e Executando com Docker
    - Dentro do VisualStudio clicar em "View" localizado na parte superior.
    - Selecionar a opção "Terminal" para abrir o terminal já dentro do diretório.
-   - Executar o seguinte comando:
+   - Executar o comando para **contruir a Imagem do Docker**.
 ```bash
 docker build -t pacoca_api .
 ```
-Ele irá contruir a Imagem do Docker.
-   
+   - Executar o comando para o executar o Contêiner Docker.
+```bash
+docker run -d --name pacoca_api_container -p 8000:80 pacoca_api
+```
+
