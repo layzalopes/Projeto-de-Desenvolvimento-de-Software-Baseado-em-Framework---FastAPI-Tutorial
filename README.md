@@ -21,6 +21,22 @@ Docker é uma plataforma que permite aos desenvolvedores automatizar a implanta�
    Passo 1: Instalar Dependências
    - Certifique-se de ter o Python 3.7+ e o Docker instalados na sua máquina.
    - Instale o FastAPI e o Uvicorn:
-     ```bash pip install fastapi uvicorn
+
+```bash
+pip install fastapi uvicorn
+```
+2. Clonando o Projeto do GitHub
+   Localize e clique no botão "Code"
+   - No repositório do tutorial FastAPI, você verá um botão verde ou cinza com a palavra "Code" no topo da página, próximo ao botão "Go to file".
+   - Clique nesse botão.
+   - Após clicar no botão "Code", uma caixa de diálogo aparecerá com diferentes opções para clonar o repositório.
+   - Certifique-se de que a opção "HTTPS" está selecionada.
+   - Clique no ícone de cópia (um pequeno botão com um ícone de prancheta) ao lado da URL para copiar o endereço do repositório.
+   - Abra o terminal ou prompt de comando clicando com o botão direito do mouse na área de trabalho e selecionando a opção "Abrir no Terminal"
+   - Executar o seguinte comando + o endereço https que foi copiado anteriormente
+```bash
+git clone https://github.com/layzalopes/Projeto-de-Desenvolvimento-de-Software-Baseado-em-Framework---FastAPI-Tutorial.git
+```
+
 
 
