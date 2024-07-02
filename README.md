@@ -11,7 +11,7 @@ FastAPI é um framework moderno, rápido (de alta performance) para a construç�
 Docker é uma plataforma que permite aos desenvolvedores automatizar a implantação de aplicativos dentro de contêineres, que são unidades leves e portáteis de software. Usando Docker, podemos garantir que o ambiente de desenvolvimento seja consistente e replicável, independentemente do sistema operacional ou das configurações do desenvolvedor.
 
 # Objetivos do Projeto
-Demonstrar como criar e configurar um projeto FastAPI.
-Ensinar como criar endpoints para diferentes operações HTTP (GET, POST, PUT, DELETE).
-Integrar o projeto FastAPI com Docker para facilitar o desenvolvimento e a implantação.
-Fornecer exemplos práticos e tutoriais passo a passo para ajudar os desenvolvedores a entender e implementar suas próprias APIs.
+- Demonstrar como criar e configurar um projeto FastAPI.
+- Ensinar como criar endpoints para diferentes operações HTTP (GET, POST, PUT, DELETE).
+- Integrar o projeto FastAPI com Docker para facilitar o desenvolvimento e a implantação.
+- Fornecer exemplos práticos e tutoriais passo a passo para ajudar os desenvolvedores a entender e implementar suas próprias APIs.
