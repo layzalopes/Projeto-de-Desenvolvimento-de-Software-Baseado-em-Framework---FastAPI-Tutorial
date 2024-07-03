@@ -17,8 +17,7 @@ Docker é uma plataforma que permite aos desenvolvedores automatizar a implanta�
 - Fornecer exemplos práticos e tutoriais passo a passo para ajudar os desenvolvedores a entender e implementar suas próprias APIs.
 
 # Passo a Passo
-1. Configurando o Ambiente
-   Instalar Dependências
+1. Instalar Dependências
    - Certifique-se de ter o Python 3.7+ e o Docker instalados na sua máquina.
    - Instale o FastAPI e o Uvicorn:
 
