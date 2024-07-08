@@ -21,14 +21,14 @@ O Insomnia é uma ferramenta poderosa para testar APIs de forma eficiente e intu
 - Fornecer exemplos práticos e tutoriais passo a passo para ajudar os desenvolvedores a entender e implementar suas próprias APIs.
 
 # Passo a Passo
-1. Instalar Dependências
+1. **Instalar Dependências**
    - Certifique-se de ter o Python 3.7+ e o Docker instalados na sua máquina.
    - Instale o FastAPI e o Uvicorn:
 
 ```bash
 pip install fastapi uvicorn
 ```
-2. Clonando o Projeto do GitHub
+2. **Clonando o Projeto do GitHub**
    Localize e clique no botão "Code"
    - No repositório do tutorial FastAPI, você verá um botão verde ou cinza com a palavra "Code" no topo da página, próximo ao botão "Go to file".
    - Clique nesse botão.
@@ -41,7 +41,7 @@ pip install fastapi uvicorn
 git clone https://github.com/layzalopes/Projeto-de-Desenvolvimento-de-Software-Baseado-em-Framework---FastAPI-Tutorial.git
 ```
 
-2. Construindo e Executando com Docker
+3. **Construindo e Executando com Docker**
    - Dentro do VisualStudio clicar em "View" localizado na parte superior.
    - Selecionar a opção "Terminal" para abrir o terminal já dentro do diretório.
    - Executar o comando para **contruir a Imagem do Docker**.
@@ -53,7 +53,7 @@ docker build -t pacoca_api .
 docker run -d -p 80:80 pacoca_api
 ```
 
-3. Baixando o Insomnia
+4. **Baixando o Insomnia**
    - Acesse o Site Oficial https://insomnia.rest/download
    - Na página inicial, clique no botão “Download” ou “Get Started”.
    - Na página de download, escolha a versão correspondente ao seu sistema operacional (Windows, macOS, Linux).
@@ -61,7 +61,7 @@ docker run -d -p 80:80 pacoca_api
    - **macOS:** Abra o arquivo .dmg baixado e arraste o ícone do Insomnia para a pasta “Aplicativos”.
    - **Linux:** As instruções podem variar dependendo da distribuição, mas geralmente incluem comandos para baixar e instalar o pacote usando o terminal. As instruções específicas estarão na página de download.
   
-4. Importar Requests
+5. **Importar Requests**
    - Clique no botão "Run In Insomnia" localizado logo abaixo. Isso pode abrir automaticamente o aplicativo Insomnia no seu computador, se estiver instalado, e importar os requests diretamente.
    - Se o Insomnia não abrir automaticamente, ele pode solicitar que você confirme a importação dos requests.
    - Depois de importar, verifique no painel esquerdo do Insomnia para encontrar a nova coleção de requests importada.
