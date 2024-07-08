@@ -59,3 +59,4 @@ docker build -t pacoca_api .
 docker run -d --name pacoca_api_container -p 8000:80 pacoca_api
 ```
 
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Pa%C3%A7oca%20API&uri=https%3A%2F%2Fgithub.com%2Flayzalopes%2FProjeto-de-Desenvolvimento-de-Software-Baseado-em-Framework---FastAPI-Tutorial%2Fblob%2Fmain%2Frequests)
