@@ -10,6 +10,10 @@ FastAPI é um framework moderno, rápido (de alta performance) para a construç�
 # Integração com Docker
 Docker é uma plataforma que permite aos desenvolvedores automatizar a implantação de aplicativos dentro de contêineres, que são unidades leves e portáteis de software. Usando Docker, podemos garantir que o ambiente de desenvolvimento seja consistente e replicável, independentemente do sistema operacional ou das configurações do desenvolvedor.
 
+# Usando o Insomnia
+
+O Insomnia é uma ferramenta poderosa para testar APIs de forma eficiente e intuitiva. Ele permite enviar solicitações HTTP para endpoints específicos da sua API e visualizar as respostas retornadas. 
+
 # Objetivos do Projeto
 - Demonstrar como criar e configurar um projeto FastAPI.
 - Ensinar como criar endpoints para diferentes operações HTTP (GET, POST, PUT, DELETE).
