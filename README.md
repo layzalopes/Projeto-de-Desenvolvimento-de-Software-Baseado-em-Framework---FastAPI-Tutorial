@@ -49,7 +49,7 @@ docker build -t pacoca_api .
 docker run -d -p 80:80 pacoca_api
 ```
 
-3. Baixar o Insomnia
+3. Baixando o Insomnia
    - Acesse o Site Oficial https://insomnia.rest/download
    - Na página inicial, clique no botão “Download” ou “Get Started”.
    - Na página de download, escolha a versão correspondente ao seu sistema operacional (Windows, macOS, Linux).
