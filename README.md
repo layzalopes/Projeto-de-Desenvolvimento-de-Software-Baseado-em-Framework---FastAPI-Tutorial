@@ -181,4 +181,22 @@ Caso não consiga fazer a importação, siga os próximos passos.
 	"detail": "Paçoca not found"
 }
 ```
+**Conclusão**
 
+  Neste tutorial, exploramos como desenvolver uma API usando FastAPI, integrando Docker para facilitar a implantação e utilizamos o Insomnia para testar as funcionalidades criadas.
+  
+  Utilizamos Docker para criar um ambiente isolado e replicável para nossa aplicação FastAPI.
+  
+  Criamos endpoints básicos para operações CRUD (Create, Read, Update, Delete) de paçocas, usando FastAPI para a criação rápida de APIs RESTful.
+  
+  Implementamos autenticação básica usando HTTP Basic Auth para proteger certas operações da API.
+  
+  Demonstramos como usar o Insomnia para enviar requests HTTP para os endpoints da API, permitindo testar as funcionalidades desenvolvidas de forma eficiente e visualizar as respostas retornadas pela API.
+  
+  Exportamos os requests configurados no Insomnia para facilitar o compartilhamento e a reutilização em equipe.
+  
+  Discutimos como integrar esses requests exportados ao README do GitHub para uma documentação clara e acessível.
+
+**Considerações Finais**
+
+  Ao final do tutorial, você deve ser capaz de desenvolver, testar e documentar APIs usando FastAPI, integrando Docker para um ambiente de desenvolvimento e também fazer utilização do Insomnia que permite uma validação muito precisa das operações da API, assegurando que todas as funcionalidades estejam operando conforme o esperado.
