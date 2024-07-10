@@ -78,16 +78,16 @@ Assim que o Insomnia for instalado crie uma conta para poder usar mais recursos 
 
 Caso não consiga fazer a importação, siga os próximos passos.
 
-6. **Criar os Requests**
+6. **Criar o Request POST**
 
    - Após a instalação, abra o Insomnia.
    - Você verá uma interface onde pode criar e gerenciar suas requisições.
    - Clique no botão "+ New Request".
-   - Nomeie o request como "Update Paçoca".
-   - Selecione o método HTTP "PUT".
+   - Nomeie o request como "Create Paçoca".
+   - Selecione o método HTTP "POST".
    - Clique em "Create".
   
-   - Defina a URL para http://localhost:80/pacocas/{pacoca_id}, substituindo {pacoca_id} pelo ID da paçoca que você deseja atualizar (por exemplo, 1).
+   - Defina a URL para http://localhost:80/pacocas
 
 7. **Adicionar Autenticação**
 
@@ -102,11 +102,83 @@ Caso não consiga fazer a importação, siga os próximos passos.
    - Adicione o corpo JSON com os dados atualizados da paçoca.
 ```bash
 {
-  "name": "Paçoca de Amendoim Atualizada",
-  "description": "Deliciosa paçoca de amendoim com novo sabor",
-  "price": 6.99
+  "name": "Paçoca Tradicional",
+  "description": "Deliciosa paçoca",
+  "price": 5.99
+}
+```
+   - Clique no botão "Send" para enviar a requisição.
+   - Verifique a resposta para confirmar que a paçoca foi criada com sucesso e o ID que foi gerado.
+
+9. **Criar Request GET**
+
+   - Clique no botão "+ New Request".
+   - Nomeie o request como "Get Paçoca".
+   - Selecione o método HTTP "GET".
+   - Clique em "Create".
+  
+   - Defina a URL para http://localhost:80/pacocas/{pacoca_id}.
+   - Certifique-se de substituir {pacoca_id} pelo ID real da paçoca que deseja **buscar**.
+
+10. **Adicionar Autenticação**
+
+   - Clique na aba "Auth" na barra de navegação do request.
+   - Selecione "Basic Auth" no menu suspenso.
+   - Insira o username 'aluno' e password '123'
+   - Clique no botão "Send" para enviar a requisição.
+   - Verifique a resposta para confirmar que a paçoca foi buscada com sucesso.
+
+11. **Criar o Request PUT**
+
+   - Clique no botão "+ New Request".
+   - Nomeie o request como "Update Paçoca".
+   - Selecione o método HTTP "PUT".
+   - Clique em "Create".
+  
+   - No campo URL, insira o endpoint completo da API para atualização de paçoca, por exemplo: http://localhost:80/pacocas/{pacoca_id}.
+   - Certifique-se de substituir {pacoca_id} pelo ID real da paçoca que deseja atualizar.
+
+12. **Adicionar Autenticação**
+
+   - Clique na aba "Auth" na barra de navegação do request.
+   - Selecione "Basic Auth" no menu suspenso.
+   - Insira o username 'aluno' e password '123'
+
+13. **Adicionar o corpo**
+
+   - Clique na aba "Body" na barra de navegação do request.
+   - Selecione "JSON".
+   - Adicione o corpo JSON com os dados atualizados da paçoca.
+```bash
+  {
+  "name": "Nova Paçoca",
+  "description": "Descrição atualizada da paçoca",
+  "price": 7.99
 }
 ```
    - Clique no botão "Send" para enviar a requisição.
    - Verifique a resposta para confirmar que a paçoca foi atualizada com sucesso.
+
+14. **Criar o Request DELETE**
+
+   - Clique no botão "+ New Request".
+   - Nomeie o request como "Delete Paçoca".
+   - Selecione o método HTTP "DELETE".
+   - Clique em "Create".
+  
+   - No campo URL, insira o endpoint completo da API para deletar alguma paçoca que foi criada, por exemplo: http://localhost:80/pacocas/{pacoca_id}.
+   - Certifique-se de substituir {pacoca_id} pelo ID real da paçoca que deseja deletar.
+
+15. **Adicionar Autenticação**
+
+   - Clique na aba "Auth" na barra de navegação do request.
+   - Selecione "Basic Auth" no menu suspenso.
+   - Insira o username 'aluno' e password '123'
+   - Clique no botão "Send" para enviar a requisição.
+   - Verifique a resposta para confirmar que a paçoca foi apagada com sucesso.
+```
+{
+	"detail": "Paçoca not found"
+}
+```
 
