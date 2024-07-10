@@ -92,7 +92,7 @@ Caso não consiga fazer a importação, siga os próximos passos.
 7. **Adicionar Autenticação**
 
    - Clique na aba "Auth" na barra de navegação do request.
-   - Selecione "Basic Auth" no menu suspenso.
+   - Selecione "Basic" no menu suspenso.
    - Insira o username 'aluno' e password '123'
 
 8. **Adicionar o corpo**
@@ -123,7 +123,7 @@ Caso não consiga fazer a importação, siga os próximos passos.
 10. **Adicionar Autenticação**
 
    - Clique na aba "Auth" na barra de navegação do request.
-   - Selecione "Basic Auth" no menu suspenso.
+   - Selecione "Basic" no menu suspenso.
    - Insira o username 'aluno' e password '123'
    - Clique no botão "Send" para enviar a requisição.
    - Verifique a resposta para confirmar que a paçoca foi buscada com sucesso.
@@ -141,7 +141,7 @@ Caso não consiga fazer a importação, siga os próximos passos.
 12. **Adicionar Autenticação**
 
    - Clique na aba "Auth" na barra de navegação do request.
-   - Selecione "Basic Auth" no menu suspenso.
+   - Selecione "Basic" no menu suspenso.
    - Insira o username 'aluno' e password '123'
 
 13. **Adicionar o corpo**
@@ -172,7 +172,7 @@ Caso não consiga fazer a importação, siga os próximos passos.
 15. **Adicionar Autenticação**
 
    - Clique na aba "Auth" na barra de navegação do request.
-   - Selecione "Basic Auth" no menu suspenso.
+   - Selecione "Basic" no menu suspenso.
    - Insira o username 'aluno' e password '123'
    - Clique no botão "Send" para enviar a requisição.
    - Verifique a resposta para confirmar que a paçoca foi apagada com sucesso.
