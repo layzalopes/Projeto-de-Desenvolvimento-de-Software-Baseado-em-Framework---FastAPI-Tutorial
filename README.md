@@ -99,7 +99,7 @@ Caso não consiga fazer a importação, siga os próximos passos.
 
    - Clique na aba "Body" na barra de navegação do request.
    - Selecione "JSON".
-   - Adicione o corpo JSON com os dados atualizados da paçoca.
+   - Adicione o corpo JSON com os dados da paçoca.
 ```bash
 {
   "name": "Paçoca Tradicional",
