@@ -64,6 +64,8 @@ docker run -d -p 80:80 pacoca_api
    - **Windows:** Execute o arquivo .exe baixado e siga as instruções na tela.
    - **macOS:** Abra o arquivo .dmg baixado e arraste o ícone do Insomnia para a pasta “Aplicativos”.
    - **Linux:** As instruções podem variar dependendo da distribuição, mas geralmente incluem comandos para baixar e instalar o pacote usando o terminal. As instruções específicas estarão na página de download.
+
+Assim que o Insomnia for instalado crie uma conta para poder usar mais recursos da ferramenta, como por exemplo **importar os requests**
   
 5. **Importar Requests**
    
@@ -72,4 +74,39 @@ docker run -d -p 80:80 pacoca_api
    - Depois de importar, verifique no painel esquerdo do Insomnia para encontrar a nova coleção de requests importada.
    - Clique na coleção para expandir e ver todos os requests dentro dela. Você pode então clicar em cada request para ver os detalhes, como método HTTP, URL e corpo da requisição.
 
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Pa%C3%A7oca%20API&uri=https%3A%2F%2Fgithub.com%2Flayzalopes%2FProjeto-de-Desenvolvimento-de-Software-Baseado-em-Framework---FastAPI-Tutorial%2Fblob%2Fmain%2Frequests)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Pa%C3%A7oca%20API&uri=https%3A%2F%2Fgithub.com%2Flayzalopes%2FProjeto-de-Desenvolvimento-de-Software-Baseado-em-Framework---FastAPI-Tutorial%2Fblob%2Fmain%2FInsomnia_2024-07-10.json)
+
+Caso não consiga fazer a importação, siga os próximos passos.
+
+6. **Criar os Requests**
+
+   - Após a instalação, abra o Insomnia.
+   - Você verá uma interface onde pode criar e gerenciar suas requisições.
+   - Clique no botão "+ New Request".
+   - Nomeie o request como "Update Paçoca".
+   - Selecione o método HTTP "PUT".
+   - Clique em "Create".
+  
+   - Defina a URL para http://localhost:80/pacocas/{pacoca_id}, substituindo {pacoca_id} pelo ID da paçoca que você deseja atualizar (por exemplo, 1).
+
+7. **Adicionar Autenticação**
+
+   - Clique na aba "Auth" na barra de navegação do request.
+   - Selecione "Basic Auth" no menu suspenso.
+   - Insira o username 'aluno' e password '123'
+
+8. **Adicionar o corpo**
+
+   - Clique na aba "Body" na barra de navegação do request.
+   - Selecione "JSON".
+   - Adicione o corpo JSON com os dados atualizados da paçoca.
+```bash
+{
+  "name": "Paçoca de Amendoim Atualizada",
+  "description": "Deliciosa paçoca de amendoim com novo sabor",
+  "price": 6.99
+}
+```
+   - Clique no botão "Send" para enviar a requisição.
+   - Verifique a resposta para confirmar que a paçoca foi atualizada com sucesso.
+
