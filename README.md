@@ -312,7 +312,7 @@ Usa os modelos para consultar e manipular os registros no banco de dados e os sc
 
 
 
-5.MAIN.PY
+5. **main.py**
 - Este é o arquivo principal do projeto, responsável pela criação da aplicação FastAPI, gerenciamento das rotas, injeção das dependências com o banco de dados, inicialização da aplicação e autenticação HTTP através de credenciais básicas.
 ```bash
 {from fastapi import FastAPI, Depends, HTTPException, status
