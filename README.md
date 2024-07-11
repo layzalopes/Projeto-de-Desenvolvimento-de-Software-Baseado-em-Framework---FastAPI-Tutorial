@@ -227,13 +227,13 @@ class Pacoca(Base):
 3. **schemas.py**
 - Definição de modelos de dados relacionados à entidade "Paçoca", estabelece estruturas de dados para representar e validar informações na aplicação. 
 
-Importa BaseModel:
+- Importa BaseModel:
 ```bash
 {
 from pydantic import BaseModel
 }
 ```
-Indica atributos básicos do produto no schema de dados:
+- Indica atributos básicos do produto no schema de dados:
 ```bash
 {class PacocaBase(BaseModel):
     name: str
@@ -241,14 +241,14 @@ Indica atributos básicos do produto no schema de dados:
     price: float
 }
 ```
-Herda de PacocaBase, usada para criação de novos objetos:
+- Herda de PacocaBase, usada para criação de novos objetos:
 ```bash
 {
 class PacocaCreate(PacocaBase):
     pass
 }
 ```
-Herda de PacocaBase e aciona o produto ID, usado para representar uma instância de completa de paçoca:
+- Herda de PacocaBase e aciona o produto ID, usado para representar uma instância de completa de paçoca:
 ```bash
 {
 class Pacoca(PacocaBase):
@@ -271,13 +271,13 @@ from . import models, schemas
 ```
 Usa os modelos para consultar e manipular os registros no banco de dados e os schemas para criar e atualizar os registros.
 
-Define a função get para consultar a tabela e obter um registro referente ao id fornecido.
+- Define a função get para consultar a tabela e obter um registro referente ao id fornecido:
 ```bash
 {def get_pacoca(db: Session, pacoca_id: int):
     return db.query(models.Pacoca).filter(models.Pacoca.id == pacoca_id).first()
 }
 ```
-Cria um novo registro, usando os dados fornecidos pelo usuário. 
+- Cria um novo registro, usando os dados fornecidos pelo usuário:
 ```bash
 {def create_pacoca(db: Session, pacoca: schemas.PacocaCreate):
     db_pacoca = models.Pacoca(**pacoca.dict())
@@ -287,7 +287,7 @@ Cria um novo registro, usando os dados fornecidos pelo usuário.
     return db_pacoca
 }
 ```
-Atualiza o registro existente na tabela com base no id e nos novos dados, faz um commit e atualiza os objetos.
+- Atualiza o registro existente na tabela com base no id e nos novos dados, faz um commit e atualiza os objetos:
 ```bash
 {def update_pacoca(db: Session, pacoca_id: int, pacoca: schemas.PacocaCreate):
     db_pacoca = db.query(models.Pacoca).filter(models.Pacoca.id == pacoca_id).first()
@@ -299,7 +299,7 @@ Atualiza o registro existente na tabela com base no id e nos novos dados, faz um
     return db_pacoca
 }
 ```
-Deleta um registro existente com base no registro informado.
+- Deleta um registro existente com base no registro informado:
 ```bash
 {def delete_pacoca(db: Session, pacoca_id: int):
     db_pacoca = db.query(models.Pacoca).filter(models.Pacoca.id == pacoca_id).first()
@@ -334,7 +334,7 @@ security = HTTPBasic()
 Importação de bibliotecas e arquivos, criação da classe fast API e criação das tabelas definidas na classe de modelo no banco de dados.
 
 
-Definição da função authenticate, para validar as credenciais de usuário fornecidas através da autenticação básica HTTP.
+- Definição da função authenticate, para validar as credenciais de usuário fornecidas através da autenticação básica HTTP:
 ```bash
 {def authenticate(credentials: HTTPBasicCredentials = Depends(security)):
     correct_username = "aluno"
@@ -349,7 +349,7 @@ Definição da função authenticate, para validar as credenciais de usuário fo
 }
 ```
 
-Define a função get_db, para fornecer uma sessão do banco de dados.
+- Define a função get_db, para fornecer uma sessão do banco de dados:
 ```bash
 {def get_db():
     db = SessionLocal()
@@ -359,15 +359,15 @@ Define a função get_db, para fornecer uma sessão do banco de dados.
         db.close()
 }
 ```
-Definição de rotas:
-Retorna uma mensagem de boas vindas.
+- Definição de rotas:
+Retorna uma mensagem de boas vindas:
 ```bash
 {@app.get("/")
 def read_root():
     return {"message": "Welcome to the Paçoca API"}
 }
 ```
-Retorna os detalhes de uma paçoca específica com base no ID fornecido.
+- Retorna os detalhes de uma paçoca específica com base no ID fornecido:
 ```bash
 {@app.get("/pacocas/{pacoca_id}", response_model=schemas.Pacoca)
 def read_pacoca(pacoca_id: int, db: Session = Depends(get_db), credentials: HTTPBasicCredentials = Depends(authenticate)):
@@ -379,7 +379,7 @@ def read_pacoca(pacoca_id: int, db: Session = Depends(get_db), credentials: HTTP
 ```
 
 
-Define a rota post, para criação de uma nova paçoca com base nos dados fornecidos no corpo da requisição.
+- Define a rota post, para criação de uma nova paçoca com base nos dados fornecidos no corpo da requisição:
 ```bash
 {@app.post("/pacocas/", response_model=schemas.Pacoca)
 def create_pacoca(pacoca: schemas.PacocaCreate, db: Session = Depends(get_db), credentials: HTTPBasicCredentials = Depends(authenticate)):
@@ -387,14 +387,14 @@ def create_pacoca(pacoca: schemas.PacocaCreate, db: Session = Depends(get_db), c
 ```    return crud.create_pacoca(db=db, pacoca=pacoca)
 }
 ```
-Atualiza os dados de uma paçoca existente com base no ID fornecido.
+- Atualiza os dados de uma paçoca existente com base no ID fornecido:
 ```bash
 {@app.put("/pacocas/{pacoca_id}", response_model=schemas.Pacoca)
 def update_pacoca(pacoca_id: int, pacoca: schemas.PacocaCreate, db: Session = Depends(get_db), credentials: HTTPBasicCredentials = Depends(authenticate)):
     return crud.update_pacoca(db=db, pacoca_id=pacoca_id, pacoca=pacoca)
 }
 ```
-Define a rota para exclusão do produto, através do ID fornecido.
+- Define a rota para exclusão do produto, através do ID fornecido:
 ```bash
 {@app.delete("/pacocas/{pacoca_id}", response_model=schemas.Pacoca)
 def delete_pacoca(pacoca_id: int, db: Session = Depends(get_db), credentials: HTTPBasicCredentials = Depends(authenticate)):
