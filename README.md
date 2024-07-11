@@ -183,7 +183,7 @@ Caso não consiga fazer a importação, siga os próximos passos.
 ```
 # Sobre o código
 1 . **database.py**
-Importa o sqlalchemy, para criação da fábrica de sessões, definição da URL do banco de dados, criação da engine, configuração com a fábrica de sessões e criação da classe Base:
+- Importa o sqlalchemy, para criação da fábrica de sessões, definição da URL do banco de dados, criação da engine, configuração com a fábrica de sessões e criação da classe Base:
 ```bash
 {
 from sqlalchemy import create_engine
@@ -207,7 +207,7 @@ Cria a engine de conexão com o banco de dados, passa a url e parâmetro thread,
 
 
 2. **models.py**
-Realiza a definição dos atributos da classe paçoca herdando da classe Base, mapeando para a  tabela chamada “pacocas” no banco de dados.
+- Realiza a definição dos atributos da classe paçoca herdando da classe Base, mapeando para a  tabela chamada “pacocas” no banco de dados.
 ```bash
 {from sqlalchemy import Column, Integer, String, Float
 from .database import Base
@@ -225,7 +225,7 @@ class Pacoca(Base):
 ```
 
 3. **schemas.py**
-Definição de modelos de dados relacionados à entidade "Paçoca", estabelece estruturas de dados para representar e validar informações na aplicação. 
+- Definição de modelos de dados relacionados à entidade "Paçoca", estabelece estruturas de dados para representar e validar informações na aplicação. 
 
 Importa BaseModel:
 ```bash
@@ -262,7 +262,7 @@ class Pacoca(PacocaBase):
 Config: configuração para facilitar a conversão de objetos no sqlalchemy.
 
 4. **crud.py**
-Faz a definição das funções crud (create, read, update, delete).
+- Faz a definição das funções crud (create, read, update, delete).
 ```bash
 {from .schemas import PacocaCreate
 from sqlalchemy.orm import Session
@@ -313,7 +313,7 @@ Deleta um registro existente com base no registro informado.
 
 
 5.MAIN.PY
-Este é o arquivo principal do projeto, responsável pela criação da aplicação FastAPI, gerenciamento das rotas, injeção das dependências com o banco de dados, inicialização da aplicação e autenticação HTTP através de credenciais básicas.
+- Este é o arquivo principal do projeto, responsável pela criação da aplicação FastAPI, gerenciamento das rotas, injeção das dependências com o banco de dados, inicialização da aplicação e autenticação HTTP através de credenciais básicas.
 ```bash
 {from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
